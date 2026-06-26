@@ -60,7 +60,7 @@ contract-agent/
 │   ├── analysis_task.py     # Task for LegalAnalyst
 │   ├── summary_task.py      # Task for ExecutiveSummarizer
 │   └── contract_crew.py     # Wires agents + tasks into a Crew
-├── mcp/
+├── agent_mcp/
 │   ├── server.py            # MCP server definition
 │   └── tools/
 │       ├── read_file.py     # Tool: read contract from disk

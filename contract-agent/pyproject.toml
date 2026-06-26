@@ -45,7 +45,7 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["app*", "graph*", "crew*", "mcp*"]
+include = ["app*", "graph*", "crew*", "agent_mcp*"]
 
 [tool.black]
 line-length = 88
