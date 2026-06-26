@@ -76,6 +76,18 @@ contract-agent/
 └── README.md
 ```
 
+## Documentation
+
+| Document | Description |
+|---|---|
+| [Architecture](docs/architecture.md) | High-level system overview: how Streamlit, LangGraph, CrewAI, and MCP connect |
+| [Agent Flow](docs/agent-flow.md) | Step-by-step journey of a contract through the three CrewAI agents |
+| [LangGraph](docs/langgraph.md) | State schema, node definitions, and conditional edge design |
+| [MCP](docs/mcp.md) | MCP server structure and how each tool is registered and called |
+| [CrewAI](docs/crewai.md) | Agent roles, task definitions, and crew assembly |
+| [Sequence Diagram](docs/sequence-diagram.md) | Full request lifecycle from file upload to rendered report (Mermaid) |
+| [Interview Notes](docs/interview-notes.md) | Talking points, design trade-offs, and answers to common technical questions |
+
 ## Setup
 
 ### Prerequisites
