@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "contract-agent"
+version = "0.1.0"
+description = "Portfolio-quality AI Agent for legal contract analysis using LangGraph, CrewAI, and MCP."
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    # UI
+    "streamlit>=1.35.0",
+
+    # LLM & Orchestration
+    "langgraph>=0.2.0",
+    "langchain>=0.2.0",
+    "langchain-openai>=0.1.0",
+
+    # AI Agents
+    "crewai>=0.70.0",
+
+    # Model Context Protocol
+    "mcp>=1.0.0",
+
+    # Document parsing
+    "pypdf>=4.0.0",
+
+    # Data validation
+    "pydantic>=2.0.0",
+
+    # Environment
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "black>=24.0.0",
+    "isort>=5.13.0",
+    "mypy>=1.9.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*", "graph*", "crew*", "mcp*"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
